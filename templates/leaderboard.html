@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive MD3 Layout - Leaderboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+
+</head>
+<body>
+  <div class="nav-drawer">
+    <h2>Navigation</h2>
+    <a href="#"><span class="material-icons">dashboard</span>Dashboard</a>
+    <a href="#"><span class="material-icons">settings</span>Settings</a>
+    <a href="#"><span class="material-icons">person</span>Profile</a>
+    <a href="#"><span class="material-icons">logout</span>Logout</a>
+  </div>
+  <div class="main-content">
+    <header>
+      <h1>Top Users - CPUB Token Leaderboard</h1>
+    </header>
+    <main>
+      <div class="card">
+        <div class="card-content">
+          <h2>Leaderboard</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>User</th>
+                <th>CPUB Token Holdings</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>CaesarNaples</td>
+                <td>10,000 CPUB</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>JaneDoe</td>
+                <td>8,500 CPUB</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>JohnSmith</td>
+                <td>7,200 CPUB</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>AliceWonder</td>
+                <td>6,000 CPUB</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>BobBuilder</td>
+                <td>5,400 CPUB</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>MaryLamb</td>
+                <td>4,800 CPUB</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>CharlieBrown</td>
+                <td>3,700 CPUB</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>LisaBlue</td>
+                <td>3,000 CPUB</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>MarkSwift</td>
+                <td>2,500 CPUB</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>GracePoole</td>
+                <td>2,000 CPUB</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

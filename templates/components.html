@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MD3 Components Showcase</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+  <style>
+    :root {
+      --md3-primary: #6200ee;
+      --md3-primary-variant: #3700b3;
+      --md3-secondary: #03dac6;
+      --md3-secondary-variant: #018786;
+      --md3-background: #f5f5f5;
+      --md3-surface: #ffffff;
+      --md3-error: #b00020;
+      --md3-on-primary: #ffffff;
+      --md3-on-secondary: #000000;
+      --md3-on-background: #000000;
+      --md3-on-surface: #000000;
+      --md3-on-error: #ffffff;
+      --md3-border-radius: 8px;
+      --md3-elevation-1: 0 1px 3px rgba(0, 0, 0, 0.2);
+      --md3-elevation-2: 0 2px 6px rgba(0, 0, 0, 0.2);
+      --md3-elevation-3: 0 4px 8px rgba(0, 0, 0, 0.3);
+      --md3-elevation-4: 0 8px 10px rgba(0, 0, 0, 0.3);
+      --md3-elevation-5: 0 16px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      padding: 1rem;
+      background-color: var(--md3-background);
+      color: var(--md3-on-background);
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      color: var(--md3-primary);
+    }
+
+    .container {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      padding: 1rem;
+    }
+
+    .card {
+      background-color: var(--md3-surface);
+      border-radius: var(--md3-border-radius);
+      box-shadow: var(--md3-elevation-1);
+      padding: 1rem;
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+
+    .card:hover {
+      box-shadow: var(--md3-elevation-3);
+      transform: translateY(-5px);
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: var(--md3-primary);
+      color: var(--md3-on-primary);
+      border: none;
+      border-radius: var(--md3-border-radius);
+      font-size: 1rem;
+      cursor: pointer;
+      text-align: center;
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    .button:hover {
+      background-color: var(--md3-primary-variant);
+      box-shadow: var(--md3-elevation-2);
+    }
+
+    .text-field {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid var(--md3-on-surface);
+      border-radius: var(--md3-border-radius);
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      background-color: var(--md3-surface);
+      color: var(--md3-on-surface);
+    }
+
+    .text-field:focus {
+      outline: none;
+      border-color: var(--md3-primary);
+      box-shadow: var(--md3-elevation-2);
+    }
+
+    .icon {
+      font-size: 36px;
+      color: var(--md3-primary);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: var(--md3-surface);
+      border-radius: var(--md3-border-radius);
+      box-shadow: var(--md3-elevation-1);
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.25rem 0.5rem;
+      border-radius: var(--md3-border-radius);
+      background-color: var(--md3-secondary);
+      color: var(--md3-on-secondary);
+      font-size: 0.875rem;
+      margin: 0.25rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MD3 Components Showcase</h1>
+  </header>
+  <div class="container">
+    <!-- Button -->
+    <div class="card">
+      <h2>Button</h2>
+      <button class="button">Click Me</button>
+    </div>
+
+    <!-- Text Field -->
+    <div class="card">
+      <h2>Text Field</h2>
+      <input type="text" class="text-field" placeholder="Enter text here">
+    </div>
+
+    <!-- Icon List -->
+    <div class="card">
+      <h2>Icons</h2>
+      <span class="material-icons icon">home</span>
+      <span class="material-icons icon">favorite</span>
+      <span class="material-icons icon">search</span>
+      <span class="material-icons icon">settings</span>
+    </div>
+
+    <!-- Card Example -->
+    <div class="card">
+      <h2>Card</h2>
+      <p>This is a simple card with MD3 styling.</p>
+    </div>
+
+    <!-- Chip Example -->
+    <div class="card">
+      <h2>Chips</h2>
+      <span class="chip">Chip 1</span>
+      <span class="chip">Chip 2</span>
+      <span class="chip">Chip 3</span>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="card">
+      <h2>Footer</h2>
+      <footer>
+        <p>&copy; 2024 Your Website</p>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
