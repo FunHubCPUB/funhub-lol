@@ -13,23 +13,18 @@ def page_2():
 # Home route
 @app.route('/')
 def home():
-    return "<h1>Welcome to the Flask App</h1><p>Explore the available routes!</p>"
+    return render_template("layout.html")
 
 # About route
 @app.route('/about')
 def about():
-    return "<h1>About Page</h1><p>This is a simple Flask application with multiple routes.</p>"
-
+    return render_template("voting.html")
 # JSON response route
 @app.route('/api/data')
 def get_data():
     data = {"message": "Hello, this is a JSON response!", "status": "success"}
     return jsonify(data)
 
-# Dynamic route with parameters
-@app.route('/greet/<name>')
-def greet(name):
-    return f"<h1>Hello, {name}!</h1><p>Welcome to our app!</p>"
 
 # Route to handle POST requests
 @app.route('/submit', methods=['GET', 'POST'])
